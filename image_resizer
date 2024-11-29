@@ -1,0 +1,11 @@
+# image_resizer.py
+
+from PIL import Image
+
+def resize_image(input_file, output_file, size):
+    img = Image.open(input_file)
+    img = img.resize(size)
+    img.save(output_file)
+
+# Sample usage
+resize_image("input.jpg", "output.jpg", (300, 300))
